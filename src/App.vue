@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
-import { DevicePhoneMobileIcon } from '@heroicons/vue/24/solid'
+import { DevicePhoneMobileIcon, HeartIcon } from '@heroicons/vue/24/solid'
 
 const favoritePhotosOfHer = ref([
   {
@@ -53,6 +53,57 @@ const favoritePhotosOfHer = ref([
     id: 17
   }
 ]);
+
+const likedAboutYou = ref([
+  {
+    id:1,
+    text:"I love how independent you are"
+  },
+  {
+    id:2,
+    text: "I love how kind you are"
+  },
+  {
+    id:3,
+    text: "I love how you like my cook foods"
+  },
+  {
+    id:4,
+    text: "I love how grateful you are"
+  },
+  {
+    id:5,
+    text: "I love how much you love crochet"
+  },
+  {
+    id:6,
+    text: "I love how much you love chopper, lychee and bepo"
+  },
+  {
+    id:7,
+    text: "I love how much you love your family"
+  },
+  {
+    id:8,
+    text:"I love how supportive you are"
+  },
+  {
+    id:9,
+    text: "I love how patient you are"
+  },
+  {
+    id:10,
+    text: "I love how you work hard"
+  },
+  {
+    id:11,
+    text: "I love how a fighter you are"
+  },
+  {
+    id:12,
+    text: "I love how much caring you are"
+  }
+]);
 </script>
 
 <template>
@@ -88,8 +139,7 @@ const favoritePhotosOfHer = ref([
           Favorite Photos of You
         </h3>
         <p class="my-4 text-center">
-          These photos remind me of how much you truly mean to me. That smile, those sparkling eyes—everything about you
-          makes me want to leap with joy!
+          These photos remind me of how much you truly mean to me. That smile, those sparkling eyes—everything about you.
         </p>
         <div class="photos-of-her-container flex align-top justify-center flex-wrap">
           <div class="photos-of-her m-2 w-3xs" v-for="photo in favoritePhotosOfHer" :key="photo.id" :style="{}">
@@ -97,6 +147,22 @@ const favoritePhotosOfHer = ref([
           </div>
         </div>
       </div>
+
+      <div class="what-I-like-about-you-section mt-120">
+        <h3 class="text-4xl darumadrop-one-regular text-center mt-3">
+          What I Love About You
+        </h3>
+        <div class="like-about-you-container mt-5 flex align-top justify-center flex-wrap">
+          <div class="like-about-you m-2 w-3xs shadow-md pl-5 pt-7 pr-7 pb-7" v-for="like in likedAboutYou" :key="like.id">
+           
+              <HeartIcon class="size-4 text-red-500 inline-block float-left"/>
+              <p class="ml-9">{{ like.text }}</p>
+           
+       
+          </div>
+        </div>
+      </div>
+
       <div class="our-story-section py-120">
         <h3 class="text-4xl darumadrop-one-regular text-center mt-3">
            Our Story So Far
@@ -167,6 +233,31 @@ const favoritePhotosOfHer = ref([
           </div>
         </div>
 
+
+        <div class="mt-120">
+          <div class="flex flex-wrap  md:flex-row-reverse">
+            <div class="w-full md:w-1/2 p-10 flex items-center justify-center p-10 md:p-20">
+               <img src="./assets/baguio_pic.webp" alt="">
+            </div>
+            <div class="w-full md:w-1/2 flex items-center justify-center md:px-20">
+              <div>
+                <h3 class="text-2xl darumadrop-one-regular mb-4">
+                  December 2024
+                </h3>
+                <p>Our first getaway, just <span class="text-sky-500">the two of us—our special moment</span> alone together. It was the most precious gift you gave me, and I’m truly grateful for it. I remember how you cried that day and I deeply apologize if I hurt you so much. Fate challenged us at that time but yet our love remained strong and prevailed.</p>
+              </div>
+            
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+
+      <div class="to-be-continued-container flex items-center justify-center h-screen">
+        <h3 class="text-5xl md:text-9xl darumadrop-one-regular text-center mb-4 tb-continued-animate">
+          To be Continued
+          </h3>
       </div>
     </div>
   </div>
@@ -220,6 +311,9 @@ const favoritePhotosOfHer = ref([
   pointer-events: none;
   animation: flicker 0.1s infinite alternate;
 }
+.tb-continued-animate{
+  animation: tbanimate .8s infinite steps(2, jump-start);
+}
 
 @keyframes flicker {
   0% {
@@ -238,6 +332,18 @@ const favoritePhotosOfHer = ref([
 
   100% {
     scale: 1.009;
+  }
+}
+
+@keyframes tbanimate {
+  0% {
+    scale: 1;
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    scale: 1.009;
+    transform: rotate(30deg);
   }
 }
 </style>
