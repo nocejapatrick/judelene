@@ -143,7 +143,7 @@ const likedAboutYou = ref([
         </p>
         <div class="photos-of-her-container flex align-top justify-center flex-wrap">
           <div class="photos-of-her m-2 w-3xs" v-for="photo in favoritePhotosOfHer" :key="photo.id" :style="{}">
-            <img :src="'/src/assets/jude' + photo.id + '.webp'" alt="">
+            <img :src="'/images/jude' + photo.id + '.webp'" alt="">
           </div>
         </div>
       </div>
@@ -202,7 +202,7 @@ const likedAboutYou = ref([
         </div>
         <div class="mt-120">
           <div class="flex flex-wrap  md:flex-row-reverse">
-            <div class="w-full md:w-1/2 p-10 flex items-center justify-center p-10 md:p-20">
+            <div class="w-full md:w-1/2 p-3 flex items-center justify-center md:p-20">
                <img src="./assets/history1.webp" alt="">
             </div>
             <div class="w-full md:w-1/2 flex items-center justify-center md:px-20">
@@ -219,7 +219,7 @@ const likedAboutYou = ref([
         </div>
 
         <div class="mt-120 flex flex-wrap">
-          <div class="w-full md:w-1/2 flex justify-center p-10 md:p-20">
+          <div class="w-full md:w-1/2 flex justify-center p-3 md:p-20">
             <img src="./assets/moving_picture.webp" alt="">
           </div>
           <div class="w-full md:w-1/2 py-10 md:p-10 flex items-center justify-center">
@@ -236,7 +236,7 @@ const likedAboutYou = ref([
 
         <div class="mt-120">
           <div class="flex flex-wrap  md:flex-row-reverse">
-            <div class="w-full md:w-1/2 p-10 flex items-center justify-center p-10 md:p-20">
+            <div class="w-full md:w-1/2 flex items-center justify-center p-3 md:p-20">
                <img src="./assets/baguio_pic.webp" alt="">
             </div>
             <div class="w-full md:w-1/2 flex items-center justify-center md:px-20">
