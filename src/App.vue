@@ -210,7 +210,7 @@ const likedAboutYou = ref([
                 <h3 class="text-2xl darumadrop-one-regular mb-4">
                   August 2024
                 </h3>
-                <p>I remember this day was the first time you hold my hands thightly its as if you're not gonna let it go and just like that I took a picture of us inside the <span style="color:#834080;">boat we were riding</span> haha.</p>
+                <p>I remember this day was the first time you hold my hands tightly its as if you're not gonna let it go and just like that I took a picture of us inside the <span style="color:#834080;">boat we were riding</span> haha.</p>
               </div>
             
             </div>
