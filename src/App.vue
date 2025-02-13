@@ -121,7 +121,7 @@ const likedAboutYou = ref([
       <img src="https://www.transparenttextures.com/patterns/asfalt-dark.png" alt="">
     </div>
     <div class="fixed w-120 md:w-140" style="transform: translate(-50%,-50%); top:50%; left:50%; z-index: -3;">
-      <video autoplay muted loop id="hero-video">
+      <video autoplay muted loop id="hero-video" preload= "auto" playsinline>
         <source src="./assets/us.mp4" type="video/mp4">
         <source src="./assets/us.mp4" type="video/ogg">
       </video>
@@ -142,7 +142,7 @@ const likedAboutYou = ref([
           These photos remind me of how much you truly mean to me. That smile, those sparkling eyes—everything about you.
         </p>
         <div class="photos-of-her-container flex align-top justify-center flex-wrap">
-          <div class="photos-of-her m-2 w-3xs" v-for="photo in favoritePhotosOfHer" :key="photo.id" :style="{}">
+          <div class="photos-of-her m-2 w-3xs"  v-for="photo in favoritePhotosOfHer" :key="photo.id" :style="{}">
             <img :src="'/images/jude' + photo.id + '.webp'" alt="">
           </div>
         </div>
@@ -163,7 +163,7 @@ const likedAboutYou = ref([
         </div>
       </div>
 
-      <div class="our-story-section py-120">
+      <div class="our-story-section py-120" >
         <h3 class="text-4xl darumadrop-one-regular text-center mt-3">
            Our Story So Far
         </h3>
