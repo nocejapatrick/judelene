@@ -121,7 +121,7 @@ const likedAboutYou = ref([
       <img src="https://www.transparenttextures.com/patterns/asfalt-dark.png" alt="">
     </div>
     <div class="fixed w-120 md:w-140" style="transform: translate(-50%,-50%); top:50%; left:50%; z-index: -3;">
-      <video autoplay muted loop id="hero-video" preload= "auto" playsinline controls="true">
+      <video autoplay muted loop id="hero-video" >
         <source src="./assets/us.mp4" type="video/mp4">
         <source src="./assets/us.mp4" type="video/ogg">
       </video>
